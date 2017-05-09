@@ -7,8 +7,9 @@
 //
 
 #import "BaseGidget.h"
+#import "WeatherConnectionManager.h"
 
-@interface WeatherGidget : BaseGidget
+@interface WeatherGidget : BaseGidget <WeatherConnectionManagerDelegate>
 
 @property (nonatomic) IBOutlet UIView *infoView;
 @property (nonatomic) IBOutlet UILabel *temperatureLabel;
@@ -17,7 +18,5 @@
 @property (nonatomic) IBOutlet UILabel *cloudsLabel;
 @property (nonatomic) IBOutlet UILabel *sunriseTimeLabel;
 @property (nonatomic) IBOutlet UILabel *sunsetTimeLabel;
-
--(void)setContentWithTemperatureString:(NSString*)temperatureString andHumidityString:(NSString*)humidityString andWindSpeedString:(NSString*)windSpeedString andCloudsString:(NSString*)cloudsString andSunriseString:(NSString*)sunriseString andSunsetString:(NSString*)sunsetString;
 
 @end

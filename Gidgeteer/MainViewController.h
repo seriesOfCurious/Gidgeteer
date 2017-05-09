@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "BaseGidget.h"
 
-@interface MainViewController : BaseViewController
+@interface MainViewController : BaseViewController<GidgetUpdateProtocol>
 
 @property (nonatomic) IBOutlet UIButton *settingsButton;
 @property (nonatomic) IBOutlet UIStackView *mainStackView;

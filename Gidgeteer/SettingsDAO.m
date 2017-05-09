@@ -12,6 +12,16 @@
 
 @implementation SettingsDAO
 
++(instancetype)instance {
+    static SettingsDAO * thisInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        thisInstance = [[self alloc] init];
+    });
+    thisInstance.locationString = @"78704";
+    return thisInstance;
+}
+
 +(NSMutableArray *)getAllGidgetsSettingsObjects {
     GidgetSettingsObject *testObject1 = [GidgetSettingsObject new];
     testObject1.gidgetTitle = @"Test Title";
@@ -26,10 +36,10 @@
     return [[NSMutableArray alloc] initWithArray:@[testObject1,testObject2]];
 }
 
-+(NSMutableArray *)getAllGidgetsDisplayableGidgets {
++(NSMutableArray *)getAllGidgetsDisplayableGidgetsForViewController:(UIViewController *)viewController {
     NSMutableArray *gidgetArray = [[NSMutableArray alloc] init];
     
-    WeatherGidget *weatherGidget = [WeatherGidget getGidget];
+    WeatherGidget *weatherGidget = [WeatherGidget getGidgetWithDelegate:viewController];
     [gidgetArray addObject:weatherGidget];
     
     return gidgetArray;

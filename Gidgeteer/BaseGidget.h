@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class BaseGidget;
+
+@protocol GidgetUpdateProtocol <NSObject>
+@optional
+-(void)updateGidget:(BaseGidget*)gidget;
+
+@end
+
 @interface BaseGidget : UIView
 
-+(instancetype)getGidget;
++(instancetype)getGidgetWithDelegate:(id)delegate;
 -(void)updateView;
+
+@property (nonatomic) id delegate;
 
 @end

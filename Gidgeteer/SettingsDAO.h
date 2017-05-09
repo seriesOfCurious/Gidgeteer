@@ -6,11 +6,14 @@
 //  Copyright © 2017 Justin Noormand. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "BaseUtil.h"
 
-@interface SettingsDAO : NSObject
+@interface SettingsDAO : BaseUtil
 
 +(NSMutableArray *)getAllGidgetsSettingsObjects;
-+(NSMutableArray *)getAllGidgetsDisplayableGidgets;
++(NSMutableArray *)getAllGidgetsDisplayableGidgetsForViewController:(UIViewController*)viewController;
+
+@property (nonatomic) NSString * locationString;
 
 @end

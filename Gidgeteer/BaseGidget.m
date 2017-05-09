@@ -10,8 +10,9 @@
 
 @implementation BaseGidget
 
-+(instancetype)getGidget {
++(instancetype)getGidgetWithDelegate:(id)delegate {
     BaseGidget *gidget = [[BaseGidget alloc] init];
+    gidget.delegate = delegate;
     return gidget;
 }
 

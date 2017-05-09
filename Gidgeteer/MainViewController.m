@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "SettingsViewController.h"
 #import "SettingsDAO.h"
-#import "BaseGidget.h"
+#import "FontUtil.h"
 
 @interface MainViewController ()
 
@@ -22,8 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.gidgetArray = [SettingsDAO getAllGidgetsDisplayableGidgets];
+    self.gidgetArray = [SettingsDAO getAllGidgetsDisplayableGidgetsForViewController:self];
     [self setUpDisplay];
+    
+    
+    //test
+    [FontUtil setFontInAllViewsAndSubviewsOf:self.view preserveSize:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -51,6 +55,15 @@
 -(IBAction)goToSettings:(id)sender {
     SettingsViewController *settingsVC = [SettingsViewController newViewController];
     [self.navigationController pushViewController:settingsVC animated:YES];
+}
+
+#pragma mark - Gidget Update Protocol
+-(void)updateGidget:(BaseGidget *)gidget {
+    for(BaseGidget *eachGidget in self.gidgetArray) {
+        if(eachGidget == gidget) {
+            //
+        }
+    }
 }
 
 @end

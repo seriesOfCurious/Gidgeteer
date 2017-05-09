@@ -11,7 +11,7 @@
 @interface GidgetSettingsObject : NSObject
 
 @property (nonatomic) NSString *gidgetTitle;
-@property (assign) bool isEnabled;
+@property (assign) BOOL isEnabled;
 @property (assign) NSInteger gidgetOrder;
 
 @end

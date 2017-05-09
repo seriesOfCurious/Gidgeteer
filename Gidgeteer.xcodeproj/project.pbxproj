@@ -23,6 +23,11 @@
 		D01412431EC0A4E500B1BE0B /* SettingsConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D01412421EC0A4E500B1BE0B /* SettingsConstants.m */; };
 		D01412461EC0A81800B1BE0B /* WeatherGidget.m in Sources */ = {isa = PBXBuildFile; fileRef = D01412451EC0A81800B1BE0B /* WeatherGidget.m */; };
 		D01412481EC0A86C00B1BE0B /* WeatherGidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01412471EC0A86C00B1BE0B /* WeatherGidget.xib */; };
+		D01BF1061EC224A500C159D1 /* FontUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D01BF1051EC224A500C159D1 /* FontUtil.m */; };
+		D01BF1091EC225A300C159D1 /* BaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D01BF1081EC225A300C159D1 /* BaseUtil.m */; };
+		D01BF10F1EC22D5900C159D1 /* NSStringCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = D01BF10E1EC22D5900C159D1 /* NSStringCategories.m */; };
+		D07C51DC1EC252AB00894D59 /* BaseConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D07C51DB1EC252AB00894D59 /* BaseConnectionManager.m */; };
+		D07C51DF1EC256F000894D59 /* WeatherConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D07C51DE1EC256F000894D59 /* WeatherConnectionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,16 @@
 		D01412441EC0A81800B1BE0B /* WeatherGidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGidget.h; sourceTree = "<group>"; };
 		D01412451EC0A81800B1BE0B /* WeatherGidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGidget.m; sourceTree = "<group>"; };
 		D01412471EC0A86C00B1BE0B /* WeatherGidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherGidget.xib; sourceTree = "<group>"; };
+		D01BF1041EC224A500C159D1 /* FontUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontUtil.h; sourceTree = "<group>"; };
+		D01BF1051EC224A500C159D1 /* FontUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontUtil.m; sourceTree = "<group>"; };
+		D01BF1071EC225A300C159D1 /* BaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUtil.h; sourceTree = "<group>"; };
+		D01BF1081EC225A300C159D1 /* BaseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUtil.m; sourceTree = "<group>"; };
+		D01BF10D1EC22D5900C159D1 /* NSStringCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringCategories.h; sourceTree = "<group>"; };
+		D01BF10E1EC22D5900C159D1 /* NSStringCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringCategories.m; sourceTree = "<group>"; };
+		D07C51DA1EC252AB00894D59 /* BaseConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseConnectionManager.h; sourceTree = "<group>"; };
+		D07C51DB1EC252AB00894D59 /* BaseConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseConnectionManager.m; sourceTree = "<group>"; };
+		D07C51DD1EC256F000894D59 /* WeatherConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherConnectionManager.h; sourceTree = "<group>"; };
+		D07C51DE1EC256F000894D59 /* WeatherConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherConnectionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,8 @@
 				D01412111EC08CB500B1BE0B /* AppDelegate.m */,
 				D014123F1EC09BA700B1BE0B /* BaseViewController.h */,
 				D01412401EC09BA700B1BE0B /* BaseViewController.m */,
+				D07C51D71EC2525F00894D59 /* connectivity */,
+				D01BF1031EC2248E00C159D1 /* util */,
 				D01412261EC08D0F00B1BE0B /* vc */,
 				D01412341EC08DBB00B1BE0B /* data */,
 				D01412191EC08CB500B1BE0B /* Assets.xcassets */,
@@ -145,6 +162,30 @@
 				D01412471EC0A86C00B1BE0B /* WeatherGidget.xib */,
 			);
 			name = gidgets;
+			sourceTree = "<group>";
+		};
+		D01BF1031EC2248E00C159D1 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D01BF1071EC225A300C159D1 /* BaseUtil.h */,
+				D01BF1081EC225A300C159D1 /* BaseUtil.m */,
+				D01BF1041EC224A500C159D1 /* FontUtil.h */,
+				D01BF1051EC224A500C159D1 /* FontUtil.m */,
+				D01BF10D1EC22D5900C159D1 /* NSStringCategories.h */,
+				D01BF10E1EC22D5900C159D1 /* NSStringCategories.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		D07C51D71EC2525F00894D59 /* connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				D07C51DA1EC252AB00894D59 /* BaseConnectionManager.h */,
+				D07C51DB1EC252AB00894D59 /* BaseConnectionManager.m */,
+				D07C51DD1EC256F000894D59 /* WeatherConnectionManager.h */,
+				D07C51DE1EC256F000894D59 /* WeatherConnectionManager.m */,
+			);
+			name = connectivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,10 +264,15 @@
 			files = (
 				D01412121EC08CB500B1BE0B /* AppDelegate.m in Sources */,
 				D01412411EC09BA700B1BE0B /* BaseViewController.m in Sources */,
+				D01BF1091EC225A300C159D1 /* BaseUtil.m in Sources */,
 				D014122F1EC08D5D00B1BE0B /* SettingsViewController.m in Sources */,
+				D07C51DC1EC252AB00894D59 /* BaseConnectionManager.m in Sources */,
 				D01412371EC08DEF00B1BE0B /* BaseGidget.m in Sources */,
+				D01BF10F1EC22D5900C159D1 /* NSStringCategories.m in Sources */,
+				D07C51DF1EC256F000894D59 /* WeatherConnectionManager.m in Sources */,
 				D014120F1EC08CB500B1BE0B /* main.m in Sources */,
 				D01412431EC0A4E500B1BE0B /* SettingsConstants.m in Sources */,
+				D01BF1061EC224A500C159D1 /* FontUtil.m in Sources */,
 				D01412461EC0A81800B1BE0B /* WeatherGidget.m in Sources */,
 				D014123C1EC0921300B1BE0B /* SettingsTableViewCell.m in Sources */,
 				D014122A1EC08D4B00B1BE0B /* MainViewController.m in Sources */,
@@ -331,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Gidgeteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noormand.Gidgeteer;
@@ -368,6 +415,7 @@
 				D01412231EC08CB500B1BE0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
