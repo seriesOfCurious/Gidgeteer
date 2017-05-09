@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="mainStackView" destination="Bcd-JO-Hsb" id="RNa-ar-5uM"/>
+                <outlet property="navBarView" destination="LwU-Hz-T0P" id="qHk-SJ-d32"/>
+                <outlet property="settingsButton" destination="1pB-2Q-QS6" id="AIn-94-gWe"/>
+                <outlet property="titleLabel" destination="exZ-6t-fxk" id="weG-Pi-AcL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwU-Hz-T0P">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gidgeteer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exZ-6t-fxk">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pB-2Q-QS6">
+                            <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                            <state key="normal" title="S"/>
+                            <connections>
+                                <action selector="goToSettings:" destination="-1" eventType="touchUpInside" id="jea-Iy-mgq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0Qz-Au-Eyb"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-nf-sNe">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bcd-JO-Hsb">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Bcd-JO-Hsb" firstAttribute="top" secondItem="Zpd-nf-sNe" secondAttribute="top" id="3sh-yp-S7b"/>
+                        <constraint firstAttribute="trailing" secondItem="Bcd-JO-Hsb" secondAttribute="trailing" id="Gvi-8h-9g7"/>
+                        <constraint firstItem="Bcd-JO-Hsb" firstAttribute="width" secondItem="Zpd-nf-sNe" secondAttribute="width" id="ZS6-e3-h6m"/>
+                        <constraint firstItem="Bcd-JO-Hsb" firstAttribute="leading" secondItem="Zpd-nf-sNe" secondAttribute="leading" id="pij-kw-ZVM"/>
+                        <constraint firstItem="Bcd-JO-Hsb" firstAttribute="height" secondItem="Zpd-nf-sNe" secondAttribute="height" id="rn3-bc-94X"/>
+                        <constraint firstAttribute="bottom" secondItem="Bcd-JO-Hsb" secondAttribute="bottom" id="xXo-q6-99v"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zpd-nf-sNe" firstAttribute="top" secondItem="LwU-Hz-T0P" secondAttribute="bottom" id="9XK-RP-Lv0"/>
+                <constraint firstItem="LwU-Hz-T0P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="R1Q-Hw-ftm"/>
+                <constraint firstAttribute="trailing" secondItem="Zpd-nf-sNe" secondAttribute="trailing" id="k3R-KW-eyf"/>
+                <constraint firstAttribute="trailing" secondItem="LwU-Hz-T0P" secondAttribute="trailing" id="laK-AV-mkm"/>
+                <constraint firstAttribute="bottom" secondItem="Zpd-nf-sNe" secondAttribute="bottom" id="nLA-If-FlG"/>
+                <constraint firstItem="Zpd-nf-sNe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pdO-DU-yP2"/>
+                <constraint firstItem="LwU-Hz-T0P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ugx-m0-KFf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="152.5" y="-4.5"/>
+        </view>
+    </objects>
+</document>
